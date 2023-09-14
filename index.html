@@ -4,66 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Задание 1</title>
-    <style>
-        *{
-            box-sizing: border-box;
-        }
-        li{
-            margin: 16px 0;
-        }
-        a{
-            text-decoration: unset;
-            color: #0055ff;
-        }
-        form{
-            width: 400px;
-            border: 1px #aaa solid;
-            border-radius: 8px;
-            background-color: #fcfcfc;
-            padding: 10px;
-        }
-        form h3{
-            text-align: center;
-            font-weight: normal;
-            margin-top: 10px;
-        }
-        form input{
-            font-size: 12px;
-        }
-        form input,
-        form textarea{
-            outline: none;
-            border: 1px #aaa solid;
-            border-radius: 3px;
-            padding: 3px 6px;
-        }
-        form input.w100{
-            width: 100%;
-        }
-        form > div{
-            margin: 6px 0;
-        }
-        form .ent > input{
-            margin-left: 12px;
-        }
-        form textarea{
-            width: 100%;
-            height: 100px;
-            resize: vertical;
-        }
-        form button{
-            width: 100px;
-            height: 25px;
-            background: rgb(60, 255, 190);
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            margin-top: 10px;
-        }
-        form button:active{
-            filter: brightness(120%);
-        }
-    </style>
+    <link rel="stylesheet" href="/style.css">
 </head>
 <body>
     <ul>
@@ -101,12 +42,14 @@
             <a href="./about/about.html">10) Относительная ссылка на страницу в каталоге about</a>
         </li>
         <li>
-            <a href="../example.html">11) Относительная ссылка на страницу в каталоге уровнем выше текущего</a>
+            <a href="./about/dir1.html">11) Относительная ссылка на страницу в каталоге уровнем выше текущего</a>
+            <br>
+            <span style="color: brown">Для проверки перейдите по ссылке</span>
         </li>
         <li>
-            <a href="../../example.html">12) Относительная ссылка на страницу в каталоге двумя уровнями выше </a>
+            <a href="./about/dir2/dir2.html">12) Относительная ссылка на страницу в каталоге двумя уровнями выше </a>
             <br>
-            <span style="color: brown">т.к. данная страница находится в корневом каталоге, пункт 11 и 12 на уровни выше не перейдут</span>
+            <span style="color: brown">Для проверки перейдите по ссылке</span>
         </li>
         <li>
             <span>13) Контекстная</span>
@@ -150,10 +93,10 @@
             </ol>
         </li>
         <li>
-            <a href="ftp://demo:password@test.rebex.net:21/" title="из сайта https://www.sftp.net/public-online-ftp-servers">21) Ссылка на файл на сервере FTP с авторизацией</a>
+            <a href="ftp://demo:password@test.rebex.net:21/main.txt" title="из сайта https://www.sftp.net/public-online-ftp-servers">21) Ссылка на файл на сервере FTP с авторизацией</a>
         </li>
         <li>
-            <form method="post">
+            <form action="/" method="post">
                 <h3>Форма</h3>
                 <div>
                     <input class="w100" type="text" name="fio" placeholder="ФИО">
@@ -169,46 +112,31 @@
                 </div>
                 <div class="ent">
                     <div>Пол:</div>
-                    <input type="radio" name="one_select" id="male">
-                    <label for="male">Мужской</label>
+                    <label>
+                        <input type="radio" name="one_select" value="male">
+                        Мужской
+                    </label>
                     <br>
-                    <input type="radio" name="one_select" id="female">
-                    <label for="female">Женский</label>
+                    <label>
+                        <input type="radio" name="one_select" value="female">
+                        Женский
+                    </label>
                 </div>
                 <div class="ent">
-                    <div>Любимый язык программирования:</div>
-                    <input type="checkbox" name="select_Pascal" id="Pascal">
-                    <label for="male">Pascal</label>
-                    <br>
-                    <input type="checkbox" name="select_C" id="C">
-                    <label for="C">C</label>
-                    <br>
-                    <input type="checkbox" name="select_C++" id="C++">
-                    <label for="C++">C++</label>
-                    <br>
-                    <input type="checkbox" name="select_JavaScript" id="JavaScript">
-                    <label for="JavaScript">JavaScript</label>
-                    <br>
-                    <input type="checkbox" name="select_PHP" id="PHP">
-                    <label for="PHP">PHP</label>
-                    <br>
-                    <input type="checkbox" name="select_Python" id="Python">
-                    <label for="Python">Python</label>
-                    <br>
-                    <input type="checkbox" name="select_Java" id="Java">
-                    <label for="Java">Java</label>
-                    <br>
-                    <input type="checkbox" name="select_Haskel" id="Haskel">
-                    <label for="Haskel">Haskel</label>
-                    <br>
-                    <input type="checkbox" name="select_Clojure" id="Clojure">
-                    <label for="Clojure">Clojure</label>
-                    <br>
-                    <input type="checkbox" name="select_Prolog" id="Prolog">
-                    <label for="Prolog">Prolog</label>
-                    <br>
-                    <input type="checkbox" name="select_Scala" id="Scala">
-                    <label for="Scala">Scala</label>
+                    <select class="w100" name="like_lang" id="like_lang" multiple="multiple">
+                        <option disabled selected>Любимый язык программирования</option>
+                        <option value="Pascal">Pascal</option>
+                        <option value="C">C</option>
+                        <option value="C++">C++</option>
+                        <option value="JavaScript">JavaScript</option>
+                        <option value="PHP">PHP</option>
+                        <option value="Python">Python</option>
+                        <option value="Java">Java</option>
+                        <option value="Haskel">Haskel</option>
+                        <option value="Clojure">Clojure</option>
+                        <option value="Prolog">Prolog</option>
+                        <option value="Scala">Scala</option>
+                    </select>
                 </div>
                 <div>
                     <textarea name="biography" placeholder="Биография"></textarea>
