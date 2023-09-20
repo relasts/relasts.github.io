@@ -7,7 +7,6 @@ a{
 }
 body{
     margin: 0;
-    margin-bottom: 85px;
 }
 input{
     font-family: Arial, Helvetica, sans-serif;
@@ -20,12 +19,10 @@ input{
     height: 120px;
     font-size: 22px;
 }
-#footer{
+footer{
     height: unset;
     padding: 20px 0;
-    position: fixed;
-    bottom: 0;
-    left: 0;
+    height: unset !important;
 }
 #header img{
     float: left; 
@@ -39,11 +36,15 @@ input{
 #site_name{
     margin-top: 15px;
 }
-.hrefs{
+#header_text ul{
+    margin: 0;
+}
+#header_text li{
     display: inline-block;
     padding: 7px;
     background-color: #ddd; 
     margin: 0;
+    list-style-type: none;
 }
 
 .content{
