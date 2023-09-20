@@ -7,22 +7,18 @@
     <link rel="stylesheet" href="style2.css">
 </head>
 <body>
-    <!-- этот блок будет тянуться по ширине окна -->
     <header id="header">
         <div class="content">
-            <!-- картинка обтекает текст слева -->
-            <img src="image2.png" alt="Описание картинки для скрин-ридеров и поисковиков" />
-            <!-- этот блок, как положено блочному элементу по умолчанию, займет всю оставшуюся ширину родительского элемента -->
+            <img src="image2.png" alt="">
             <div id="header_text">
-                <div class="hrefs"><a href="./example.html">Ссылка меню 1</a></div>
-                <div class="hrefs"><a href="./about/about.html">Ссылка 2</a></div>
-                <div class="hrefs"><a href="about/dir2.html">Ссылка 3</a></div>
+                <div class="hrefs"><a href="#hyberHrefs">Ссылка меню 1</a></div>
+                <div class="hrefs"><a href="#htable">Ссылка 2</a></div>
+                <div class="hrefs"><a href="#hform">Ссылка 3</a></div>
             </div>
             <div id="site_name">Сайт для задания 2</div>
         </div>
     </header>
 
-    <!-- этот блок будет ограничен по ширине и горизонтально выровнен по центру родительского элемента -->
     <nav id="nav" class="content">
         <ul>
             <li id="hyberHrefs">
@@ -116,7 +112,7 @@
                     </li>
                 </ul>
             </li>
-            <li>
+            <li id="htable">
                 <table id="table_2">
                     <thead>
                         <tr>
@@ -167,7 +163,7 @@
                     </tbody>
                 </table>
             </li>
-            <li>
+            <li id="hform">
                 <form action="/" method="post">
                     <h3>Форма</h3>
                     <div>
