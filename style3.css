@@ -1,0 +1,260 @@
+*{
+    box-sizing: border-box;
+}
+a{
+    text-decoration: unset;
+    color: #0055ff;
+}
+body{
+    margin: 0;
+}
+input{
+    font-family: Arial, Helvetica, sans-serif;
+}
+h2{
+    text-align: center;
+}
+
+header{
+    min-height: 120px;
+}
+.content{
+    width: 100%;
+}
+#site_name{
+    height: 120px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 20px;
+    background-color: #e4e4e4;
+}
+header nav{
+    background-color: #e4e4e4;
+    margin-top: 20px;
+}
+header nav ul{
+    padding-left: 0;
+}
+header nav > ul > li{
+    list-style-type: none;
+    padding: 5px 10px;
+}
+#header_text{
+    font-size: 20px;
+}
+
+#main{
+    margin: 0 auto; 
+    padding: 10px;
+    font-size: 20px;
+}
+#main{
+    padding: 0;
+}
+#main ul{
+    padding-left: 0;
+    margin: 0;
+}
+#main > ul > li{
+    padding: 0 8px 20px;
+    background-color: #f2f2f2;
+    list-style-type: none;
+    margin: 10px 0;
+    text-align: center;
+}
+#htable{
+    overflow-x: auto;
+}
+header nav ul{
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+#main ul{
+    display: flex;
+    flex-direction: column;
+}
+#htable{
+    order: -1;
+}
+
+#footer{
+    width: 100%; 
+    background-color: #e4e4e4;
+    height: 120px;
+    font-size: 22px;
+}
+footer{
+    padding: 20px 0;
+    height: unset !important;
+    margin-top: 15px;
+}
+#logo_img{
+    float: left; 
+    padding: 10px; 
+    width: 120px; 
+    height: 120px;
+    background-color: #e4e4e4;
+}
+#logo_img img{
+    height: 100%;
+}
+
+#hyberHrefs{
+    text-align: left !important;
+    font-size: 20px;
+}
+#hyberHrefs div{
+    margin: 8px 0;
+}
+#hyberHrefs li{
+    list-style-type: none;
+    margin: 20px 0;
+    padding: 0;
+}
+#hyberHrefs h2{
+    margin: 0;
+}
+
+#table_2{
+    border-collapse: collapse;
+    margin: 0 auto;
+    /* font-size: 3.6vw; */
+}
+#table_2, 
+#table_2 td{
+    border: 1px #aaa solid;
+}
+
+#table_2 td{
+    padding: 5px;
+    text-align: center;
+}
+#table_2 tr:nth-child(even){
+    background-color: #cfcfcf;
+}
+#table_2 tr:nth-child(odd){
+    background-color: #efefef;
+}
+#table_2 thead tr{
+    background-color: #e1e1e1 !important;
+}
+
+form{
+    width: 100%;
+    max-width: 400px;
+    border: 1px #aaa solid;
+    border-radius: 8px;
+    background-color: #fcfcfc;
+    padding: 10px;
+    margin: auto;
+}
+form input{
+    font-size: 16px;
+}
+form input,
+form textarea,
+form select{
+    outline: none;
+    border: 1px #aaa solid;
+    border-radius: 3px;
+    padding: 3px 6px;
+}
+.w100{
+    width: 100%;
+}
+form > div{
+    margin: 6px 0;
+}
+form .ent{
+    text-align: left;
+}
+form .ent label{
+    margin-left: 10px;
+}
+form .ent > input{
+    margin-left: 12px;
+}
+form textarea{
+    width: 100%;
+    height: 100px;
+    resize: vertical;
+    font-size: 16px;
+}
+form button{
+    width: 100px;
+    height: 25px;
+    background: rgb(60, 255, 190);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+form button:active{
+    filter: brightness(120%);
+}
+
+
+@media screen and (orientation: landscape){
+    .content{
+        max-width: 960px;
+        margin: 0 auto;
+    }
+    header{
+        background-color: #e4e4e4;
+    }
+    header .content{
+        display: flex;
+    }
+    #flex_head{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    #site_name{
+        width: calc(100% - 120px);
+        height: 100%;
+        padding-right: unset;
+        padding-left: 30px;
+        justify-content: flex-start;
+        width: 100%;
+        background-color: transparent;
+
+    }
+    #header_text{
+        width: calc(100% - 120px);
+        order: -1;
+        width: 100%;
+        margin-top: 0;
+    }
+    header nav{
+        margin: 0 auto; 
+        margin-top: 20px; 
+        padding: 0;
+        font-size: 20px;
+        display: flex;
+        justify-content: flex-end;
+        background-color: transparent;
+    }
+    header nav ul{
+        display: inline-flex;
+    }
+    header nav > ul > li{
+        padding: 5px 12px;
+        background-color: #f2f2f2;
+        list-style-type: none;
+        text-align: center;
+    }
+    header nav > ul > li:nth-child(2){
+        order: -1;
+    }
+
+    #main{
+        margin-top: 0;
+    }
+    #htable{
+        order: 0;
+    }
+}
