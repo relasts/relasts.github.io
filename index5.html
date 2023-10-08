@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style5.css">
+    <title>Задание 5</title>
+</head>
+<body>
+    <div id="main">
+        <h3>Калькулятор стоимости заказа</h3>
+        <h4 id="error"></h4>
+        <div>
+            <select name="tovar" id="tovar">
+                <option value="headphones" data-price="700">Наушники (700)</option>
+                <option value="mouse" data-price="400">Мышка (400)</option>
+                <option value="keyboard" data-price="2500">Клавиатура (2500)</option>
+                <option value="microfon" data-price="3000">Микрофон (3000)</option>
+                <option value="camera" data-price="1500">Камера (1500)</option>
+            </select>
+        </div>
+        <div><input type="number" id="count" placeholder="Кол-во товаров"></div>
+        <div class="foot">
+            <button id="price_but">Подсчёт стоимости</button>
+            <div id="price"></div>
+        </div>
+    </div>
+
+    <script src="index5.js" defer></script>
+</body>
+</html>
