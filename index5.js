@@ -28,7 +28,8 @@ window.onload = function() {
         }
     }
 
-    document.getElementById("price_but").addEventListener("click", function(){
+    document.getElementById("price_but").addEventListener("click", function(e){
+        e.preventDefault();
         price();
     });
 
