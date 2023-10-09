@@ -1,40 +1,41 @@
-window.onload = function() {
-    function price(){
-        let tovar = document.getElementById("tovar"),
-            count = document.getElementById("count").value,
-            dataPrice = tovar.options[tovar.selectedIndex].getAttribute("data-price"),
-            error = "";
-        
-        if(/^\d+$/.test(count)){
+/*jslint browser: true */
+window.onload = function () {
+    function price() {
+        let tovar = document.getElementById("tovar");
+        let count = document.getElementById("count").value;
+        let dataPriceEl = tovar.options[tovar.selectedIndex];
+        let dataPrice = dataPriceEl.getAttribute("data-price");
+        let error = "";
+        let price_el = document.getElementById("price");
+
+        if (/^\d+$/.test(count)) {
             count = Number(count);
-        }
-        else{
+        } else {
             error = "Неверно введено количество товаров";
         }
-        if(/^\d+$/.test(dataPrice)){
+        if (/^\d+$/.test(dataPrice)) {
             dataPrice = Number(dataPrice);
-        }
-        else{
+        } else {
             error = "Неверно указана стоимость товара";
         }
 
-        if(error == ""){
+        if (error === "") {
             document.getElementById("error").innerHTML = "";
-            document.getElementById("price").innerHTML = dataPrice * count + "₽";
-        }
-        else{
+            price_el.innerHTML = dataPrice * count + "₽";
+        } else {
             document.getElementById("error").innerHTML = error;
-            document.getElementById("price").innerHTML = "";
+            price_el.innerHTML = "";
         }
     }
+    let price_but = document.getElementById("price_but");
 
-    document.getElementById("price_but").addEventListener("click", function(e){
+    price_but.addEventListener("click", function (e) {
         e.preventDefault();
         price();
     });
 
-    document.addEventListener("keyup", function(event){
-        if(event.code === "Enter"){
+    document.addEventListener("keyup", function (event) {
+        if (event.code === "Enter") {
             price();
         }
     });
