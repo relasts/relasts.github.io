@@ -67,7 +67,7 @@ select{
 @media screen and (max-width: 430px) {
     input,
     select{
-        font-size: 5vw !important;
+        font-size: 4.2vw !important;
     }
     #main{
         width: 100%;
