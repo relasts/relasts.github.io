@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style6.css">
+    <title>Задание 6</title>
+</head>
+<body>
+    <form id="main">
+        <h3>Калькулятор стоимости заказа</h3>
+        <h4 id="error"></h4>
+        <div class="selects">
+            <div>
+                <label>
+                    <input type="radio" name="service" id="save" data-price="800">
+                    Гидрогелевая плёнка (800₽)
+                </label>
+            </div>
+            <div>
+                <label>
+                    <input type="radio" name="service" id="strap">
+                    Ремешок
+                </label>
+            </div>
+            <div>
+                <label>
+                    <input type="radio" name="service" id="watch" data-price="20000">
+                    Samsung galaxy watch 4 40mm (20000₽)
+                </label>
+            </div>
+        </div>
+        <div id="types_tovar" class="hide">
+            <select name="type_tovar" id="type_tovar">
+                <option value="silicon" data-price="1000">Силиконовый (1000₽)</option>
+                <option value="koja" data-price="2500">Кожанный (2500₽)</option>
+                <option value="stal" data-price="4000">Стальной (4000₽)</option>
+            </select>
+        </div>
+        <div>
+            <input type="number" name="count" id="count" placeholder="Кол-во товаров" value="1">
+        </div>
+        <div id="selects_dop" class="selects hide">
+            <div>
+                <label>
+                    <input type="checkbox" name="garantia" id="garantia" data-price="5000">
+                    Доп. гарантия на год (+5000₽)
+                </label>
+            </div>
+            <div>
+                <label>
+                    <input type="checkbox" name="e-sim" id="e-sim" data-price="4000">
+                    Версия с e-sim (+4000₽)
+                </label>
+            </div>
+        </div>
+        <div class="foot">
+            <div id="price"></div>
+        </div>
+    </form>
+
+    <script src="index6.js" defer></script>
+</body>
+</html>
