@@ -10,74 +10,73 @@ window.onload = function () {
     let e_sim = document.getElementById("e-sim");
     let select_el = 0;
 
-    function price(el, sub) {
-        if(sub === 0){
-            let el_price = parseInt(el.getAttribute("data-price"));
-            document.getElementById("price").innerHTML = el_price * parseInt(count_inp.value) + "₽";
+    function price(sub) {
+        let sum = 0;
+        let csum = parseInt(count_inp.value);
+
+        // if (/^\d+$/.test(dataPrice)) {
+        //     dataPrice = Number(dataPrice);
+        // } else {
+        //     error = "Неверно указана стоимость товара";
+        // }
+
+        if (sub === 0) {
+            let el_price = parseInt(tovar1.getAttribute("data-price"));
+            sum = el_price * csum;
         }
-        if(sub == 1){
-            let dataPriceEl = el.options[el.selectedIndex];
+        if (sub === 1) {
+            let dataPriceEl = type_tovar.options[type_tovar.selectedIndex];
             let dataPrice = dataPriceEl.getAttribute("data-price");
-            document.getElementById("price").innerHTML = dataPrice * parseInt(count_inp.value) + "₽";
+            sum = parseInt(dataPrice) * csum;
         }
-        if(sub == 2){
-            let sum = parseInt(tovar3.getAttribute("data-price")) * parseInt(count_inp.value);
+        if (sub === 2) {
+            sum = parseInt(tovar3.getAttribute("data-price")) * csum;
 
-            if(garantia.checked){
-                sum += parseInt(garantia.getAttribute("data-price")) * parseInt(count_inp.value);
+            if (garantia.checked) {
+                sum += parseInt(garantia.getAttribute("data-price")) * csum;
             }
-            if(e_sim.checked){
-                sum += parseInt(e_sim.getAttribute("data-price")) * parseInt(count_inp.value);
+            if (e_sim.checked) {
+                sum += parseInt(e_sim.getAttribute("data-price")) * csum;
             }
-
-            document.getElementById("price").innerHTML = sum + "₽";
         }
+        document.getElementById("price").innerHTML = sum + "₽";
     }
 
-    tovar1.addEventListener("click", function (e) {
+    tovar1.addEventListener("click", function () {
         document.getElementById("types_tovar").classList.add("hide");
         document.getElementById("selects_dop").classList.add("hide");
-        price(this, 0);
         select_el = 0;
+        price(select_el);
     });
-    tovar2.addEventListener("click", function (e) {
+    tovar2.addEventListener("click", function () {
         document.getElementById("types_tovar").classList.remove("hide");
         document.getElementById("selects_dop").classList.add("hide");
-        price(type_tovar, 1);
         select_el = 1;
+        price(select_el);
     });
-    tovar3.addEventListener("click", function (e) {
+    tovar3.addEventListener("click", function () {
         document.getElementById("types_tovar").classList.add("hide");
         document.getElementById("selects_dop").classList.remove("hide");
-        price(this, 0);
-        price(garantia, 2);
         select_el = 2;
+        price(select_el);
     });
 
-    type_tovar.addEventListener("change", function (e) {
-        price(type_tovar, 1);
+    type_tovar.addEventListener("change", function () {
+        price(1);
     });
 
-    count_inp.addEventListener("input", function (e) {
-        if(select_el == 0){
-            price(document.querySelector("input[name=\"service\"]:checked"), 0);
-        }
-        else if(select_el == 1){
-            price(type_tovar, 1);
-        }
-        else if(select_el == 2){
-            price(this, 2);
-        }
+    count_inp.addEventListener("input", function () {
+        price(select_el);
     });
 
-    garantia.addEventListener("click", function (e) {
-        price(this, 2);
+    garantia.addEventListener("click", function () {
+        price(2);
     });
-    e_sim.addEventListener("click", function (e) {
-        price(this, 2);
+    e_sim.addEventListener("click", function () {
+        price(2);
     });
 
-    form.addEventListener("submit", function(e){
+    form.addEventListener("submit", function (e) {
         e.preventDefault();
     });
 };
