@@ -8,11 +8,10 @@ window.onload = function () {
     let type_tovar = document.getElementById("type_tovar");
     let garantia = document.getElementById("garantia");
     let e_sim = document.getElementById("e-sim");
-    let errorh = document.getElementById("error").innerHTML;
     let select_el = -1;
     let error = "";
 
-    function isInts(x, type = 0){
+    function isInts(x, type = 0) {
         if (error === "") {
             if (/^\d+$/.test(x)) {
                 error = "";
@@ -41,10 +40,10 @@ window.onload = function () {
         }
         if (type === 2) {
             if (garantia.checked) {
-                sum = isInts(garantia.getAttribute("data-price")) * csum;
+                sum += isInts(garantia.getAttribute("data-price")) * csum;
             }
             if (e_sim.checked) {
-                sum = isInts(e_sim.getAttribute("data-price")) * csum;
+                sum += isInts(e_sim.getAttribute("data-price")) * csum;
             }
             sum += isInts(tovar3.getAttribute("data-price")) * csum;
         }
