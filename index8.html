@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="libs/bootstrap-4.0.0-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style8.css">
+    <script src="libs/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slapform@latest/dist/index.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <title>Задание 8</title>
+</head>
+<body>
+
+
+  <button type="button" class="btn btn-primary main_but" data-toggle="modal" data-target="#exampleModal">
+    Открыть форму
+  </button>
+
+  <div class="modal" id="exampleModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Калькулятор стоимости заказа</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form method="POST" action="https://api.slapform.com/hSfvks6qU" id="main">
+            <h4 id="status"></h4>
+            <div>
+                <input type="text" name="fio" id="fio" class="form_input" placeholder="ФИО" required>
+            </div>
+            <div>
+                <input type="email" name="email" id="email" class="form_input" placeholder="Email" required>
+            </div>
+            <div>
+                <input type="tel" name="phone" id="phone" class="form_input" placeholder="Телефон" required>
+            </div>
+            <div>
+                <input type="text" name="organization" id="organization" class="form_input" placeholder="Организация" required>
+            </div>
+            <div>
+                <textarea name="message" id="message" class="form_input" placeholder="Сообщение"></textarea>
+            </div>
+            <div>
+                <label>
+                    <input type="checkbox" name="oznakomlen" id="oznakomlen">
+                    Согласен(на) с политикой обработки персональных данных
+                </label>
+            </div>
+            <button id="send" class="btn btn-primary">Отправить</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script src="index8.js" defer></script>
+</body>
+</html>
