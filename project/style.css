@@ -29,10 +29,9 @@
 }
 body{
     font-family: "Montserrat", sans-serif !important;
-    color: #3e454c;
-    background: #eeeeee;
     margin: 0;
     padding: 0;
+    margin-bottom: 50px;
 }
 .container{
     width: 94%;
@@ -86,6 +85,12 @@ header:before{
     background: rgba(0, 0, 0, 0.6);
     z-index: 1;
 }
+.header_back_img{
+    position: absolute;
+    top: -3%;
+    left: -10%;
+    width: 100%;
+}
 
 .title{
     font-size: 23px;
@@ -115,12 +120,14 @@ button:hover{
     flex-direction: column;
     border-left: 3px #F14D34 solid;
     padding-left: 10px;
+    padding-top: 3px;
+    padding-bottom: 3px;
 }
 .header_zag_big{
     font-size: 48px !important;
 }
 .header_zag_big:after{
-    content: url(/imgs/cup.png);
+    content: url(imgs/cup.png);
     position: relative;
     right: 0;
     top: 0;
@@ -243,4 +250,78 @@ nav li{
 }
 .menu .thisPage{
     color:#F14D34
+}
+
+
+/* support */
+.supports_list > div{
+    padding: 27px 36px 42px 25px;
+    box-shadow: 20px 20px 40px rgba(5, 12, 51, 0.05);
+    position: relative;
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 5px 0;
+    background: #fff;
+    position: relative;
+    z-index: 1;
+}
+.supports_list > div > img{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+.support_num{
+    font-size: 12px;
+    font-weight: bold;
+    color: #818598;
+    margin-bottom: 20px;
+}
+.supports_list .zag{
+    font-size: 18px;
+    color: #000;
+    margin-bottom: 12px;
+}
+.supports_list .podzag{
+    font-size: 16px;
+    color: #818598;
+    line-height: 138%;
+    position: relative;
+    z-index: 1;
+}
+
+
+/* expertise */
+#expertise{
+    background: #171925;
+    margin-top: -150px;
+    padding-top: 140px;
+    color: #fff;
+    position: relative;
+}
+#expertise .title{
+    text-align: left;
+}
+#expertise .header_categories > div{
+    width: 60%;
+}
+#expertise .header_categories .podzag{
+    font-size: 16px;
+}
+.expertise_back_img{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    opacity: 0.2;
+}
+.expertise_laptop{
+    position: relative;
+    bottom: -60px;
+    width: 87%;
+}
+
+
+/* rate */
+#rate{
+    padding-top: 60px;
 }
