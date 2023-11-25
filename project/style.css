@@ -253,6 +253,44 @@ nav li{
 }
 
 
+/* services */
+#services .title {
+    text-align: left;
+}
+
+#services .podzag {
+    text-align: left;
+    color: #050C33;
+    opacity: 70%;
+}
+
+.services_part{
+    width: 49%;
+    margin-top: 63px;
+    display: inline-block;
+}
+.services_imgs{
+    position: relative;
+    margin-bottom: 18px;
+}
+.services_part .podzag1{
+    padding-right: 20px;
+    font-size: 15px;
+}
+
+#services img:nth-child(2) {
+    width: 81px;
+    height: 81px;
+    position: absolute;
+    left: 55px;
+    bottom: 7px;
+}
+#services img:nth-child(3){
+    width: 114px;
+    height: 71px;
+}
+
+
 /* support */
 .supports_list > div{
     padding: 27px 36px 42px 25px;
@@ -324,31 +362,4 @@ nav li{
 /* rate */
 #rate{
     padding-top: 60px;
-}
-
-/* services */
-#services {
-    padding-left: 20px;
-}
-
-#services .title {
-    text-align: left;
-    color: #050C33;
-}
-
-#services .podzag {
-    text-align: left;
-    color: #050C33;
-    opacity: 70%;
-}
-
-.services_part {
-    width: 182px;
-    height: 194px;
-}
-
-
-#services img {
-    width: 81px;
-    height: 81px;
 }
