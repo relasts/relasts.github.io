@@ -256,12 +256,7 @@ nav li{
 /* services */
 #services .title {
     text-align: left;
-}
-
-#services .podzag {
-    text-align: left;
     color: #050C33;
-    opacity: 70%;
 }
 
 .services_part{
@@ -275,7 +270,14 @@ nav li{
 }
 .services_part .podzag1{
     padding-right: 20px;
-    font-size: 15px;
+    text-align: left;
+    opacity: 70%;
+    color: #050C33
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 22px;
 }
 
 #services img:nth-child(2) {
