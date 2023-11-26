@@ -440,3 +440,47 @@ nav li{
     text-transform: uppercase;
     opacity: 1;
 }
+
+/* team */
+
+#team {
+    padding-left: 20px;
+}
+
+#team .title {
+    text-align: center;
+    width: 100%;
+}
+
+#team > div > img {
+    width: 280px;
+    height: 280px;
+}
+
+#team .name {
+    padding-top: 30px;
+    color: #050C33;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 22px;
+}
+
+#team .podzag {
+    color: #050C33;
+    width: 280px;
+    font-size: 16px;
+    opacity: 0.7;
+}
+
+.teammate {
+    margin-left: 5.5%;
+    width: 280px;
+    display: inline-grid;
+    margin-top: 20px;
+}
+
+.team_button{
+    color: #F14D34;
+    margin: 43px auto 0;
+}
