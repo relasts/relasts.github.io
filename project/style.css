@@ -492,3 +492,42 @@ nav li{
     width: 90%;
     max-width: 280px;
 }
+
+/* partners */
+
+#partners {
+    padding-top: 20px;
+}
+
+#partners .title {
+    color: #050C33;
+    font-weight: 700;
+}
+
+#partners .podzag {
+    color: #050C33;
+    font-size: 20px;
+}
+
+#companies {
+    display: flex;
+    overflow: hidden;
+    
+}
+
+.partner {
+    position: relative;
+    width: 291px;
+    height: 155px;
+}
+
+.partner img:nth-child(1) {
+    width: 100%;
+}
+
+.partner img:nth-child(2) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
