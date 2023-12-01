@@ -113,8 +113,8 @@ header:before{
 }
 .button_select,
 button:hover{
-    color: #fff;
-    background: #F14D34;
+    color: #fff !important;
+    background: #F14D34 !important;
 }
 
 .header_categories > div{
@@ -354,8 +354,11 @@ nav li{
 #expertise .title{
     text-align: left;
 }
+#expertise .header_categories > div > span{
+    color: #F14D34;
+}
 #expertise .header_categories > div{
-    width: 60%;
+    width: 100%;
 }
 #expertise .header_categories .podzag{
     font-size: 16px;
