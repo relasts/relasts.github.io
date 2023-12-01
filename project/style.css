@@ -92,15 +92,15 @@ header:before{
     width: 100%;
 }
 
-.title{
-    font-size: 23px;
+h1{
+    font-size: 24px;
     line-height: 115%;
     text-align: center;
     margin-top: 40px;
     margin-bottom: 15px;
     font-weight: bold;
 }
-.subtitle{
+h2{
     font-size: 14px;
     line-height: 155%;
     text-align: center;
@@ -157,7 +157,7 @@ button:hover{
     position: fixed;
     left: 0;
     bottom: 0;
-    width: 100%;
+    width: 100vw;
     background: #000;
     z-index: 4;
     height: 35px;
@@ -210,7 +210,7 @@ nav{
     position: fixed;
     left: 0;
     bottom: -100%; /*35px */
-    width: 100%;
+    width: 100vw;
     background: #000;
     font-size: 12px;
     transition: 0.5s;
@@ -261,7 +261,7 @@ nav li{
 
 
 /* services */
-#services .title {
+#services h1 {
     text-align: left;
     color: #050C33;
 }
@@ -351,14 +351,15 @@ nav li{
     color: #fff;
     position: relative;
 }
-#expertise .title{
+#expertise h1{
     text-align: left;
 }
 #expertise .header_categories > div > span{
     color: #F14D34;
 }
 #expertise .header_categories > div{
-    width: 100%;
+    width: 99%;
+    margin-right: 0;
 }
 #expertise .header_categories .podzag{
     font-size: 16px;
@@ -401,7 +402,8 @@ nav li{
     font-size: 72px;
     font-weight: bold;
     line-height: 100%;
-    display: flex;
+    /* display: flex; */
+    display: none;
 }
 .tarif_price div{
     color: #050C33;
@@ -445,7 +447,7 @@ nav li{
 }
 
 /* team */
-#team .title {
+#team h1 {
     text-align: center;
     width: 100%;
 }
@@ -502,7 +504,7 @@ nav li{
     padding-top: 20px;
 }
 
-#partners .title {
+#partners h1 {
     color: #050C33;
     font-weight: 700;
 }
@@ -533,4 +535,51 @@ nav li{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+/* form */
+#form{
+    background: linear-gradient(261deg, rgba(255, 255, 255, 0.28) -114.85%, rgba(255, 255, 255, 0.00) 69.04%), #040613;
+    display: inline-block;
+    width: 100%;
+}
+#form h1{
+    color: #fff;
+}
+#form h2{
+    text-align: left;
+    opacity: 0.7;
+    margin-bottom: 30px;
+}
+.form_contact{
+    margin-bottom: 30px;
+}
+.form_contact div{
+    padding-left: 46px;
+    position: relative;
+    color: #fff;
+    font-weight: bold;
+    line-height: 150%;
+}
+.form_phone{
+    font-size: 32px;
+    margin-bottom: 12px;
+}
+.form_mail{
+    font-size: 18px;
+    text-decoration-line: underline;
+}
+.form_contact div:before{
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.form_phone:before{
+    content: url(imgs/phone.svg);
+    width: 24px;
+}
+.form_mail:before{
+    content: url(imgs/mail.svg);
+    width: 28px;
 }
