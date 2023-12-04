@@ -498,6 +498,22 @@ nav li{
     max-width: 280px;
 }
 
+/* reviews */
+
+#reviewsdiv {
+    position: relative;
+}
+
+#backreview {
+    display: flex;
+    width: 26vw;
+    height: 26vh;
+    opacity: 0.04;
+    position: absolute;
+    margin-top: -90px;
+    margin-left: -6vw;
+}
+
 /* partners */
 
 #partners {
