@@ -4,9 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../libs/bootstrap-4.0.0-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../libs/slick/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="../libs/slick/slick/slick-theme.css"/>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <script src="../libs/jquery-3.4.1.min.js"></script>
     <script src="../libs/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../libs/slick/slick/slick.min.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <title>Проект WEB</title>
 </head>
 <body>
@@ -35,15 +40,15 @@
                     <div class="podzag">лет опыта в сфере Drupal</div>
                 </div>
                 <div>
-                    <div class="zag">200+</div>
+                    <div class="zag">50+</div>
                     <div class="podzag">модулей и тем в формате DrupalGive</div>
                 </div>
                 <div>
-                    <div class="zag">35 000</div>
+                    <div class="zag">90 000</div>
                     <div class="podzag">часов поддержки сайтов на Drupal</div>
                 </div>
                 <div>
-                    <div class="zag">200+</div>
+                    <div class="zag">300+</div>
                     <div class="podzag">Проектов на поддержке</div>
                 </div>
             </div>
@@ -235,7 +240,7 @@
                         <div class="podzag">Только Drupal сайты, не<br> берем на поддержку сайты<br> на других CMS!</div>
                     </div>
                     <div>
-                        <div class="podzag">Учавствуем в разработке<br> ядра Drupal и модулей на<br> Drupal.org, разрабатываем<br> <spam>свои модули Drupal</spam></div>
+                        <div class="podzag">Учавствуем в разработке<br> ядра Drupal и модулей на<br> Drupal.org, разрабатываем<br> <a href="">свои модули Drupal</a></div>
                     </div>
                     <div>
                         <div class="podzag">Поддерживаем сайты на<br> Drupal 5, 6, 7 и 8</div>
@@ -261,7 +266,7 @@
                             <div class="tarif_item">Неиспользованные оплаченные часы переносятся на следующий месяц</div>
                             <div class="tarif_item">Предоплата от 6 000 рублей в месяц</div>
                         </div>
-                        <button class="tarif_button">СВЯЖИТЕСЬ С НАМИ</button>
+                        <button class="tarif_button">СВЯЖИТЕСЬ С НАМИ!</button>
                     </div>
 
                     <div class="tarif_category active">
@@ -303,45 +308,47 @@
         </section>
         <section id="cases"></section>
         <section id="team">
-            <h1>Команда</h1>
-            <div id="teammates">
-                <div class="teammate">
-                    <div class="teammate2">
-                        <img src="imgs/team1.jpg" alt="">
-                        <div class="name">Сергей Синица</div>
-                        <div class="podzag">Руководитель отдела веб-разработки, канд. техн. наук, заместитель директора</div>
+            <div class="container">
+                <h1>Команда</h1>
+                <div id="teammates">
+                    <div class="teammate">
+                        <div class="teammate2">
+                            <img src="imgs/team1.jpg" alt="">
+                            <div class="name">Сергей Синица</div>
+                            <div class="podzag">Руководитель отдела веб-разработки, канд. техн. наук, заместитель директора</div>
+                        </div>
+                    </div>
+                    <div class="teammate">
+                        <div class="teammate2">
+                            <img src="imgs/team2.jpg" alt="">
+                            <div class="name">Роман Агабеков</div>
+                            <div class="podzag">Руководитель отдела DevOPS, директор</div>
+                        </div>
+                    </div>
+                    <div class="teammate">
+                        <div class="teammate2">
+                            <img src="imgs/team3.jpg" alt="">
+                            <div class="name">Сергей Синица</div>
+                            <div class="podzag">Руководитель отдела поддержки сайтов</div>
+                        </div>
+                    </div>
+                    <div class="teammate">
+                        <div class="teammate2">
+                            <img src="imgs/team4.jpg" alt="">
+                            <div class="name">Дарья Бочкарёва</div>
+                            <div class="podzag">Руководитель отдела продвижения, контекстной рекламы и контент-поддержки сайтов</div>
+                        </div>
+                    </div>
+                    <div class="teammate">
+                        <div class="teammate2">
+                            <img src="imgs/team5.jpg" alt="">
+                            <div class="name">Ирина Торкунова</div>
+                            <div class="podzag">Менеджер по работе с клиентами</div>
+                        </div>
                     </div>
                 </div>
-                <div class="teammate">
-                    <div class="teammate2">
-                        <img src="imgs/team2.jpg" alt="">
-                        <div class="name">Роман Агабеков</div>
-                        <div class="podzag">Руководитель отдела DevOPS, директор</div>
-                    </div>
-                </div>
-                <div class="teammate">
-                    <div class="teammate2">
-                        <img src="imgs/team3.jpg" alt="">
-                        <div class="name">Сергей Синица</div>
-                        <div class="podzag">Руководитель отдела поддержки сайтов</div>
-                    </div>
-                </div>
-                <div class="teammate">
-                    <div class="teammate2">
-                        <img src="imgs/team4.jpg" alt="">
-                        <div class="name">Дарья Бочкарёва</div>
-                        <div class="podzag">Руководитель отдела продвижения, контекстной рекламы и контент-поддержки сайтов</div>
-                    </div>
-                </div>
-                <div class="teammate">
-                    <div class="teammate2">
-                        <img src="imgs/team5.jpg" alt="">
-                        <div class="name">Ирина Торкунова</div>
-                        <div class="podzag">Менеджер по работе с клиентами</div>
-                    </div>
-                </div>
+                <button class="team_button">Вся команда</button>
             </div>
-            <button class="team_button">Вся команда</button>
         </section>
         <section id="reviews">
             <div id="reviewsdiv">
@@ -353,24 +360,32 @@
             </div>
         </section>
         <section id="partners">
-            <h1>С нами работают</h1>
-            <div class="podzag">Десятки компаний доверяют нам самое ценное, что у них есть в интернете – свои сайты. Мы делаем всё, чтобы наше сотрудничество было долгим.</div>
+            <div class="container">
+                <h1>С нами работают</h1>
+                <h2>Десятки компаний доверяют нам самое ценное, что у них есть в интернете – свои сайты. Мы делаем всё, чтобы наше сотрудничество было долгим.</h2>
+            </div>
             <div id="companies">
-                <div class="partner">
-                    <img src="imgs/partner_bg.svg" alt="">
-                    <img src="imgs/partner1.svg" alt="">
+                <div class="slick autoplay">
+                    <div class="partner">
+                        <img src="imgs/partner1.svg" alt="">
+                    </div>
+                    <div class="partner">
+                        <img src="imgs/partner2.svg" alt="">
+                    </div>
+                    <div class="partner">
+                        <img src="imgs/partner3.svg" alt="">
+                    </div>
                 </div>
-                <div class="partner">
-                    <img src="imgs/partner_bg.svg" alt="">
-                    <img src="imgs/partner2.svg" alt="">
-                </div>
-                <div class="partner">
-                    <img src="imgs/partner_bg.svg" alt="">
-                    <img src="imgs/partner3.svg" alt="">
-                </div>
-                <div class="partner">
-                    <img src="imgs/partner_bg.svg" alt="">
-                    <img src="imgs/partner4.svg" alt="">
+                <div class="slick autoplay2">
+                    <div class="partner">
+                        <img src="imgs/partner1.svg" alt="">
+                    </div>
+                    <div class="partner">
+                        <img src="imgs/partner2.svg" alt="">
+                    </div>
+                    <div class="partner">
+                        <img src="imgs/partner3.svg" alt="">
+                    </div>
                 </div>
             </div>
         </section>
@@ -382,8 +397,8 @@
             <h2>Срочно нужна поддержка сайта? Ваша команда не успевает справиться самостоятельно или предыдущий подрядчик не справился с работой? Тогда вам точно к нам! Просто оставьте заявку и наш менеджер с вами свяжется!</h2>
 
             <div class="form_contact">
-                <div class="form_phone">8 800 222-26-73</div>
-                <div class="form_mail">info@drupal-coder.ru</div>
+                <div class="form_phone"><a href="tel:+78002222673">8 800 222-26-73</a></div>
+                <div class="form_mail"><a href="mailto:info@drupal-coder.ru">info@drupal-coder.ru</a></div>
             </div>
 
             <form action="">
@@ -403,15 +418,36 @@
                 <div>
                     <label>
                         <input type="checkbox" name="oznakomlen" id="oznakomlen">
-                        Отправляя заявку, я даю согласие на обработку своих персональных данных
+                        <div></div>
+                        <span>Отправляя заявку, я даю согласие на <a href="">обработку своих персональных данных</a></span>
                     </label>
                 </div>
-                <button id="send" class="btn btn-primary">Отправить</button>
+                <div data-theme="dark" class="g-recaptcha" data-sitekey="6LemVDkpAAAAAJNZllYEmAuDYTNDItQwwv0LsQvH"></div>
+                <button id="send" class="btn_send button_select">СВЯЖИТЕСЬ С НАМИ</button>
             </form>
         </div>
+        <div class="razdel"></div>
+        <div class="container">
+            <div class="socials">
+                <a class="social">
+                    <i class="fab fa-vk"></i>
+                </a>
+                <a class="social">
+                    <i class="fab fa-telegram-plane"></i>
+                </a>
+                <a class="social">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                <a class="social">
+                    <div class="social_fb">ФБ</div>
+                </a>
+            </div>
+            <div class="footer_end">
+                ООО «Инитлаб», Краснодар, Россия.<br>
+                Drupal является зарегистрированной торговой маркой Dries Buytaert.
+            </div>
+        </div>
     </footer>
-
-
 
     <script src="core.js"></script>
 </body>

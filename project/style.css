@@ -31,7 +31,6 @@ body{
     font-family: "Montserrat", sans-serif !important;
     margin: 0;
     padding: 0;
-    margin-bottom: 50px;
 }
 .container{
     width: 94%;
@@ -52,15 +51,29 @@ button{
     outline: none !important;
     margin: auto;
 }
-
+input,
+textarea{
+    border-radius: 5px;
+    border: 1px rgba(255, 255, 255, 0.3) solid;
+    background: transparent;
+    color: #fff;
+    padding: 20px 24px;
+    font-size: 14px;
+    line-height: 114.286%;
+    outline: none;
+}
+a, 
+a:hover{
+    color: #F14D34 !important;
+}
 
 /* header */
 header{
     background: #000;
-    min-height: 100vh;
     color: #fff;
     position: relative;
     overflow: hidden;
+    padding-bottom: 88px;
 }  
 header video {
     position: absolute;
@@ -117,6 +130,10 @@ button:hover{
     background: #F14D34 !important;
 }
 
+.header_categories{
+    position: relative;
+    z-index: 1;
+}
 .header_categories > div{
     width: calc(50% - 23px);
     margin: 10px;
@@ -412,6 +429,9 @@ nav li{
     display: inline-block;
     margin-left: 10px;
 }
+.tarif_podprise{
+    display: none;
+}
 .tarif_item{
     margin-top: 21px;
     margin-left: 31px;
@@ -433,6 +453,7 @@ nav li{
     opacity: 0.5;
     color: #050C33;
     margin-top: 45px;
+    text-align: center;
 }
 .tarif_individual{
     text-align: center;
@@ -478,12 +499,13 @@ nav li{
     margin-top: 20px;
     display: inline-flex;
     justify-content: center;
-    padding: 0 10px;
-    max-width: 280px;
+    padding: 0 15px;
 }
 #teammates {
     display: flex;
     flex-wrap: wrap;
+    /* max-width: 540px; */
+    margin: auto;
 }
 
 .team_button {
@@ -492,10 +514,10 @@ nav li{
 }
 .teammate2 {
     display: inline-block;
+    max-width: 280px;
 }
 .teammate2 img{
-    width: 90%;
-    max-width: 280px;
+    width: 100%;
 }
 
 /* reviews */
@@ -515,42 +537,23 @@ nav li{
 }
 
 /* partners */
-
-#partners {
-    padding-top: 20px;
-}
-
-#partners h1 {
+#partners h2{
     color: #050C33;
-    font-weight: 700;
+    opacity: 0.7;
+    text-align: left;
+    font-size: 16px;
 }
-
-#partners .podzag {
-    color: #050C33;
-    font-size: 20px;
-}
-
-#companies {
-    display: flex;
+#companies{
     overflow: hidden;
-    
 }
-
-.partner {
-    position: relative;
-    width: 291px;
-    height: 155px;
-}
-
-.partner img:nth-child(1) {
+#companies .slick img{
     width: 100%;
+    margin: auto;
 }
-
-.partner img:nth-child(2) {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+#companies .slick-slide{
+    width: clamp(180px, 19vw, 291px);
+    /* height: 155px; */
+    margin: 5px;
 }
 
 /* form */
@@ -563,7 +566,7 @@ nav li{
     color: #fff;
 }
 #form h2{
-    text-align: left;
+    text-align: justify;
     opacity: 0.7;
     margin-bottom: 30px;
 }
@@ -576,6 +579,9 @@ nav li{
     color: #fff;
     font-weight: bold;
     line-height: 150%;
+}
+.form_contact a{
+    color: #fff !important;
 }
 .form_phone{
     font-size: 32px;
@@ -598,4 +604,96 @@ nav li{
 .form_mail:before{
     content: url(imgs/mail.svg);
     width: 28px;
+}
+
+form{
+    margin-bottom: 80px;
+}
+form > div{
+    display: flex;
+}
+form input,
+form textarea{
+    width: 100%;
+    margin-bottom: 7px;
+}
+form textarea{
+    min-height: 150px;
+    margin-bottom: 0;
+}
+
+form label{
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+}
+form label > div{
+    position: relative;
+    height: 25px;
+    width: 25px;
+    border: 2px solid rgba(256, 256, 256, 0.5);
+    background-color: transparent;
+    border-radius: 5px;
+    display: inline-block;
+    margin-right: 13px;
+}
+form label > div:before{
+    content: url("imgs/checked.svg");
+    display: block;
+    width: 21px;
+    height: 21px;
+    opacity: 0;
+    margin-left: -2px;
+    margin-top: -2px;
+    transition: 0.2s;
+}
+
+form label input:checked + div:before{
+    opacity: 1;
+}
+form #oznakomlen{
+    display: none;
+}
+form label span{
+    color: #FFF;
+    font-size: 12px;
+    line-height: normal;
+}
+form .g-recaptcha{
+    margin-bottom: 12px;
+}
+form button{
+    width: 100%;
+}
+
+.razdel{
+    height: 1px;
+    width: 100%;
+    background-color: #fff;
+    opacity: 0.3;
+}
+
+.socials{
+    padding-top: 56px;
+    margin-bottom: 15px;
+}
+.social{
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    background: #f14d34;
+    border: 2px solid #f14d34;
+    border-radius: 5px;
+    text-align: center;
+    transition: 0.3s;
+    line-height: 30px;
+    margin-right: 10px;
+}
+.social > *{
+    color: #fff;
+    font-weight: bold;
+}
+.footer_end{
+    color: #fff;
+    padding-bottom: 55px;
 }
