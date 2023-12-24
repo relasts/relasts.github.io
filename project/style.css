@@ -164,6 +164,9 @@ button:hover{
 }
 
 /* menu */
+.menu a{
+    color: #fff !important;
+}
 .mobile_head_menu .container{
     display: flex;
     justify-content: space-between;
@@ -256,8 +259,8 @@ nav li{
 .menu_podcat span:after{
     content: "\25BC";
     position: absolute;
-    top: -2px;
-    right: -14px;
+    top: -1px;
+    right: -12px;
 }
 .menu_podcat > ul{
     margin-left: -20px;
@@ -364,12 +367,17 @@ nav li{
 #expertise{
     background: #171925;
     margin-top: -180px;
-    padding-top: 170px;
+    padding-top: 200px;
     color: #fff;
     position: relative;
 }
+#expertise .container{
+    position: relative;
+    z-index: 2;
+}
 #expertise h1{
     text-align: left;
+    margin-top: 0;
 }
 #expertise .header_categories > div > span{
     color: #F14D34;
@@ -385,13 +393,15 @@ nav li{
     position: absolute;
     right: 0;
     bottom: 0;
-    width: 100%;
-    opacity: 0.2;
+    max-width: 100%;
+    max-height: 100%;
+    /* opacity: 0.2; */
 }
 .expertise_laptop{
     position: relative;
-    bottom: -60px;
+    bottom: -10vw;
     width: 87%;
+    max-width: 600px;
 }
 
 
@@ -407,7 +417,9 @@ nav li{
     border: 1px solid rgba(0, 0, 0, 0.10);
     background: #FFF;
     padding: 37px 15px 30px;
+    margin: auto;
     margin-top: 30px;
+    max-width: 460px;
 }
 .tarif_title{
     color: #F14D34;
@@ -696,4 +708,139 @@ form button{
 .footer_end{
     color: #fff;
     padding-bottom: 55px;
+}
+
+@media (min-width: 768px){
+    .menus{
+        padding: 30px 0;
+    }
+    nav{
+        position: unset;
+        margin-top: 10px;
+    }
+    .mobile_head_menu{
+        position: unset;
+        background: unset;
+    }
+    .mobile_head_menu .container{
+        width: 100% !important;
+        margin-left: 0;
+    }
+    .mobile_head_menu .logo{
+        width: 190px;
+    }
+    .mobile_head_menu .logo_a{
+        margin-right: 60px;
+    }
+    nav{
+        background: transparent;
+        width: unset;
+    }
+    .menu{
+        border-bottom: unset;
+        max-height: unset;
+    }
+    .menu > li,
+    .menu_podcat > ul > li{
+        border-top: unset;
+        padding: 0;
+    }
+    .menu_podcat > ul{
+        /* display: none; */
+        position: fixed;   
+        margin-left: 0;
+        margin-top: 20px;
+        width: unset;
+    }
+    .menu li{
+        display: inline-block;
+    }
+    .menu > li{
+        margin-right: 30px;
+        margin-bottom: 8px;
+        position: relative;
+    }
+    .menu_podcat span{
+        margin-right: 12px;
+    }
+    .menu_podcat span:hover + ul{
+        display: block;
+    }
+
+
+    .burger_menu{
+        display: none;
+    }
+
+    .supports_list{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .supports_list > div{
+        width: calc(50% - 10px);
+        margin: 5px;
+    }
+    #expertise .header_categories{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    #expertise .header_categories > div:nth-child(odd){
+        margin-left: 0;
+    }
+    #expertise .header_categories > div{
+        width: calc(50% - 10px) !important;
+    }
+    #expertise h1{
+        font-size: 32px;
+    }
+}
+
+@media (min-width: 992px){
+    .services_part{
+        width: 25%;
+    }
+    #expertise{
+        padding-top: 300px;
+        padding-bottom: 70px;
+    }
+    #expertise .container{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: end;
+    }
+    #expertise h1{
+        font-size: 42px;
+    }
+    .expertise_laptop{
+        position: absolute;
+        width: 48vw;
+        max-width: unset;
+        bottom: -70px;
+        max-width: 720px;
+        /* margin-top: 200px; */
+    }
+    #expertise .header_categories,
+    #expertise h1{
+        /* padding-left: 48%; */
+        width: 500px;
+    }
+}
+
+@media (min-width: 1200px){
+    .supports_list > div{
+        width: calc(25% - 10px);
+        margin: 5px;
+    }
+    #expertise{
+        padding-top: 405px;
+        padding-bottom: 173px;
+    }
+    .expertise_laptop{
+        bottom: -110px;
+    }
+    #expertise .header_categories,
+    #expertise h1{
+        /* padding-left: 48%; */
+        width: 585px;
+    }
 }
