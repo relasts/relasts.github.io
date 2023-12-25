@@ -50,6 +50,8 @@ window.onload = function () {
         clearTimeout(setTimer);
         setTimer = setTimeout(() => { slicker(); }, 500);
     });
+  
+  
 
     // 6LemVDkpAAAAAMTv_m7XcDbfvpIv1tYvD8prjJyK
 };
