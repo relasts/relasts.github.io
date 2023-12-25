@@ -601,9 +601,17 @@ nav li{
     font-weight: bold !important;
 }
 
+.active .text {
+    font-size: 16px;
+}
+
 .passive .title {
     color: black !important;
     font-weight: bold !important;
+}
+
+.passive .text {
+    font-size: 0px;
 }
 
 /* form */
